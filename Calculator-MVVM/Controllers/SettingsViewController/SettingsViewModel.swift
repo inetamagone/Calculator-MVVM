@@ -6,17 +6,9 @@
 //
 
 import Foundation
+import UIKit
 
 class SettingsViewModel {
-    var onOpenMainViewController: (() -> Void)?
-
-    func shouldOpenMainViewController() {
-        self.onOpenMainViewController?()
-    }
-    
-//    func printModel() {
-//        print("Model prints")
-//    }
     
 
 }

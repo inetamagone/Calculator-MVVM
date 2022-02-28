@@ -13,30 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-//        guard let windowScene = (scene as? UIWindowScene) else { return }
-//        self.window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-//
-//        self.window?.windowScene = windowScene
-//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//
-//        let mainViewController = storyBoard.instantiateViewController(withIdentifier: "mainVc") as! MainViewController
-//        let mainViewModel = MainViewModel()
-//        mainViewController.configure(viewModel: mainViewModel)
-//
-//        let settingsViewController = SettingsViewController()
-//        let navigationController = UINavigationController(rootViewController: settingsViewController)
-//        let settingsViewModel = SettingsViewModel()
-//
-//        settingsViewModel.onOpenMainViewController = { [weak self] in navigationController.pushViewController(mainViewController, animated: true)
-//        }
-//
-//        settingsViewController.configure(viewModel: settingsViewModel)
-//
-//
-//        self.window?.rootViewController = storyBoard.instantiateInitialViewController()
-//        self.window?.makeKeyAndVisible()
         guard let _ = (scene as? UIWindowScene) else { return }
-        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

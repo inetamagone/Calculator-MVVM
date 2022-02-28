@@ -9,11 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    private var mainViewModel: MainViewModel?
-    
-    func configure(viewModel: MainViewModel) {
-        self.mainViewModel = viewModel
-    }
+    private var mainViewModel = MainViewModel()
     
     @IBOutlet weak var resultLabel: UILabel!
     
@@ -23,19 +19,19 @@ class MainViewController: UIViewController {
     
     @IBAction func numberButtonTapped(_ sender: UIButton) {
         guard let labelText: String = sender.titleLabel?.text else {return}
-        mainViewModel?.numberTapped(screenText: resultLabel, number: labelText)
+        mainViewModel.numberTapped(screenText: resultLabel, number: labelText)
     }
     
     @IBAction func actionButtonTapped(_ sender: UIButton) {
         guard let labelText: String = sender.titleLabel?.text else {return}
-        mainViewModel?.operandTapped(screenText: resultLabel, operand: labelText)
+        mainViewModel.operandTapped(screenText: resultLabel, operand: labelText)
     }
     
     @IBAction func equalButtonTapped(_ sender: UIButton) {
-        mainViewModel?.equalTapped(screenText: resultLabel)
+        mainViewModel.equalTapped(screenText: resultLabel)
     }
     
     @IBAction func clearButtonTapped(_ sender: UIButton) {
-        mainViewModel?.clearTapped(screenText: resultLabel)
+        mainViewModel.clearTapped(screenText: resultLabel)
     }
 }

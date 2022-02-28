@@ -7,8 +7,6 @@
 
 import UIKit
 
-import UIKit
-
 class MainViewModel {
     
     // MARK: - Variables

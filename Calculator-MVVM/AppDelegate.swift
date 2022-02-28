@@ -14,29 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: UISceneSession Lifecycle
 
-//    var window: UIWindow?
-//    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
-//        self.window = UIWindow(frame: UIScreen.main.bounds)
-//        self.window?.makeKeyAndVisible()
-//
-//        let mainViewController = storyBoard.instantiateViewController(withIdentifier: "mainVc") as! MainViewController
-//        let mainViewModel = MainViewModel()
-//        mainViewController.configure(viewModel: mainViewModel)
-
-//        let settingsViewController = storyBoard.instantiateViewController(withIdentifier: "settingsVc") as! SettingsViewController
-//        let navigationController = UINavigationController(rootViewController: settingsViewController)
-//        let settingsViewModel = SettingsViewModel()
-//
-//        settingsViewModel.onOpenMainViewController = { [weak self] in navigationController.pushViewController(mainViewController, animated: true)
-//        }
-//
-//        settingsViewController.configure(viewModel: settingsViewModel)
-
-//       self.window?.rootViewController = navigationController
-        
         return true
     }
     
