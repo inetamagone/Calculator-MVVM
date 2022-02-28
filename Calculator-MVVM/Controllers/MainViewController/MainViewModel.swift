@@ -9,6 +9,15 @@ import UIKit
 
 class MainViewModel {
     
+    // MARK: - Observable Object
+    
+    var greetingsMessage: ObservableObject<String?> =
+    ObservableObject(nil)
+    
+    func displayGreetingsMessage() {
+        self.greetingsMessage.value = "The Calculator is open!"
+    }
+    
     // MARK: - Variables
     
     var items = [String]()

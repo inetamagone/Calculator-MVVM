@@ -15,12 +15,22 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupItems()
+        setupBinders()
+    }
+    
+    private func setupBinders() {
+        viewModel.message.bind {
+            [weak self] message in
+            if let message = message {
+                print(message)
+            }
+        }
     }
 }
 
 private extension SettingsViewController {
     func setupItems() {
-        view.backgroundColor = .blue
+        view.backgroundColor = .yellow
 
         view.addSubview(button)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -37,6 +47,7 @@ private extension SettingsViewController {
     }
 
     @objc func goToCalculator() {
+        viewModel.displayMessage()
         openCalculator()
     }
         

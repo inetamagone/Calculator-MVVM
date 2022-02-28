@@ -15,6 +15,22 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupBinders()
+    }
+    
+    // For the alert message
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        mainViewModel.displayGreetingsMessage()
+    }
+    
+    private func setupBinders() {
+        mainViewModel.greetingsMessage.bind {
+            [weak self] greetingsMessage in
+            if let message = greetingsMessage {
+                self?.presentAlert(message: message)
+            }
+        }
     }
     
     @IBAction func numberButtonTapped(_ sender: UIButton) {
@@ -33,5 +49,11 @@ class MainViewController: UIViewController {
     
     @IBAction func clearButtonTapped(_ sender: UIButton) {
         mainViewModel.clearTapped(screenText: resultLabel)
+    }
+    
+    func presentAlert(message: String) {
+        let alertVC = UIAlertController(title: "Success" , message: message, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        return self.present(alertVC, animated: true, completion: nil)
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC5F189127CD12A200087FB2 /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5F189027CD12A200087FB2 /* ObservableObject.swift */; };
 		FC65F2E227B691C00009F6F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC65F2E127B691C00009F6F3 /* AppDelegate.swift */; };
 		FC65F2E627B691C00009F6F3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC65F2E527B691C00009F6F3 /* MainViewController.swift */; };
 		FC65F2E927B691C00009F6F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC65F2E727B691C00009F6F3 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC5F189027CD12A200087FB2 /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
 		FC65F2DE27B691C00009F6F3 /* Calculator-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calculator-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC65F2E127B691C00009F6F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC65F2E527B691C00009F6F3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				FC65F2EA27B691C20009F6F3 /* Assets.xcassets */,
 				FC65F2EC27B691C20009F6F3 /* LaunchScreen.storyboard */,
 				FC65F2EF27B691C20009F6F3 /* Info.plist */,
+				FC5F189027CD12A200087FB2 /* ObservableObject.swift */,
 			);
 			path = "Calculator-MVVM";
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				FC65F2E227B691C00009F6F3 /* AppDelegate.swift in Sources */,
 				FC65F30427B6B3B20009F6F3 /* SettingsViewController.swift in Sources */,
 				FC65F2F927B6938D0009F6F3 /* MainViewModel.swift in Sources */,
+				FC5F189127CD12A200087FB2 /* ObservableObject.swift in Sources */,
 				FC65F30627B6B3CB0009F6F3 /* SettingsViewModel.swift in Sources */,
 				FCA8E29827B94BBC00B9C522 /* SceneDelegate.swift in Sources */,
 			);
