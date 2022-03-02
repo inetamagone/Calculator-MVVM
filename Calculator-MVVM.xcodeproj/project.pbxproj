@@ -71,7 +71,6 @@
 				FC65F2EA27B691C20009F6F3 /* Assets.xcassets */,
 				FC65F2EC27B691C20009F6F3 /* LaunchScreen.storyboard */,
 				FC65F2EF27B691C20009F6F3 /* Info.plist */,
-				FC5F189027CD12A200087FB2 /* ObservableObject.swift */,
 			);
 			path = "Calculator-MVVM";
 			sourceTree = "<group>";
@@ -81,6 +80,7 @@
 			children = (
 				FC65F2F627B692D10009F6F3 /* MainViewController */,
 				FC65F30227B6B3800009F6F3 /* SettingsViewController */,
+				FC5F189027CD12A200087FB2 /* ObservableObject.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
