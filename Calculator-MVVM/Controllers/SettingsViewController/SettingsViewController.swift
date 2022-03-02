@@ -9,35 +9,50 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-    private var viewModel: SettingsViewModel?
+    private var viewModel = SettingsViewModel()
     private let button = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupItems()
+        setupBinders()
     }
-
-    func configure(viewModel: SettingsViewModel) {
-        self.viewModel = viewModel
+    
+    private func setupBinders() {
+        viewModel.message.bind {
+            [weak self] message in
+            if let message = message {
+                print(message)
+            }
+        }
     }
 }
 
 private extension SettingsViewController {
     func setupItems() {
-        view.backgroundColor = .orange
+        view.backgroundColor = .yellow
 
         view.addSubview(button)
         button.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            button.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            button.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 65),
+            button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -65),
+            button.heightAnchor.constraint(equalToConstant: 70)
         ])
         button.addTarget(self, action: #selector(goToCalculator), for: .touchUpInside)
-        button.setTitle("Open calculator", for: .normal)
+        button.setTitle("Open Calculator", for: .normal)
+        button.backgroundColor = .darkGray
+        button.layer.cornerRadius = 10
     }
 
     @objc func goToCalculator() {
-        viewModel?.shouldOpenMainViewController()
-        //viewModel?.printModel()
+        viewModel.displayMessage()
+        openCalculator()
+    }
+        
+    func openCalculator() {
+        let mainViewController = storyboard?.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+        present(mainViewController, animated: true, completion: nil)
     }
 }

@@ -6,17 +6,17 @@
 //
 
 import Foundation
+import UIKit
 
 class SettingsViewModel {
-    var onOpenMainViewController: (() -> Void)?
 
-    func shouldOpenMainViewController() {
-        self.onOpenMainViewController?()
+    // MARK: - Observable Object
+    
+    var message: ObservableObject<String?> =
+    ObservableObject(nil)
+    
+    func displayMessage() {
+        self.message.value = "Now You can Calculate!"
     }
-    
-//    func printModel() {
-//        print("Model prints")
-//    }
-    
 
 }
